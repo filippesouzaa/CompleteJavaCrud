@@ -1,0 +1,49 @@
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"descricao":"Omo", "preco": 12.75, "codigo": "123"}' \
+  http://localhost:9091/api/produtos
+  
+  
+  
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"numero":1, "emissao": "2018-02-21"}' \
+  http://localhost:9091/api/pedidos  
+  
+  
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"numero":1, "emissao": "2018-02-21", "itens":[ 
+       {"quantidade": 13.00, "valor": 18.75, "percentualDeDesconto": 0.00, "produto": {"id": "bac0e4f2-f7a1-46ed-b65d-cc7e3525ba42"} } 
+   ]}' \
+  http://localhost:9091/api/pedidos  
+  
+
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"nivel":1,  
+       "dia": "2018-02-21", 
+       "jogador": {"id": "4b6f1b61-8d25-4263-b9da-bc3680d9a4c6"}, 
+       "fase":    {"id": "6a85f119-8782-4d0e-b38f-9203c1fcecd6"} 
+   }' \
+  http://localhost:9091/api/conquistas  
+
+
+
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"numero":2, "emissao": "2018-02-21", "itens":[ 
+       {"quantidade": 13.00, "valor": 18.75, "percentualDeDesconto": 0.00, "produto": {"id": "55c38196-96ed-443a-9dd4-05d160a30eb3"} },  
+       {"quantidade": 52.50, "valor":  1.75, "percentualDeDesconto": 7.00, "produto": {"id": "098a36ec-03ba-4999-98d4-a393552f827b"} }  
+   ]}' \
+  http://localhost:9091/api/pedidos  
+  
+  
+  
+  
+  
